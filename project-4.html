@@ -1,0 +1,157 @@
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project 4 — Rory Spiteri</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .project-hero {
+    margin-bottom: 24px;
+  }
+  .project-hero .section-label { margin-bottom: 8px; }
+  .project-hero h1 { margin: 0 0 10px; }
+  .project-hero .summary { color: var(--muted); font-size: 14.5px; margin: 0; }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: var(--text);
+  }
+  .tag::before { content: "▸ "; color: var(--accent); }
+
+  .link-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 18px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .link-row a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .link-row a:hover { border-bottom-color: var(--accent); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .about-grid .panel p { color: var(--text); margin: 0 0 14px; }
+  .about-grid .panel p:last-child { margin-bottom: 0; }
+
+  .timeline {
+    margin-top: 24px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-item .date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .timeline-item h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .timeline-item p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+  @media (max-width: 720px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .timeline-item { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span>Rory Spiteri</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<main class="shell">
+
+  <div class="container">
+
+    <div class="project-hero">
+      <p class="section-label">Project 04</p>
+      <h1>Social Engineering & Phishing Simulation</h1>
+      <p class="summary">A project focused on understanding and simulating social engineering attacks, particularly phishing, to improve awareness and defensive strategies.</p>
+
+      <div class="tag-row">
+        <span class="tag">Social Engineering</span>
+        <span class="tag">Phishing Attack & Defence</span>
+        <span class="tag">Kali Linux</span>
+      </div>
+
+      <div class="link-row">
+        <a href="projects.html">← Back to Projects</a>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="panel">
+        <p class="section-label">Overview</p>
+        <p>Utilize kali linux's Social Engineering Toolkit (SET) to conduct social engineering exercises and understand the principles of phishing attacks and defenses.</p>
+      
+      </div>
+
+      <div class="panel">
+        <p class="section-label">Outcome</p>
+        <p>Gain practical experience in conducting social engineering exercises and develop a deeper understanding of phishing attack techniques and defensive measures.</p>
+      </div>
+    </div>
+
+
+      <div class="panel">
+    <p class="section-label">Project Report</p>
+    <iframe
+      src="SET.pdf"
+      title="Project Report PDF"
+      style="width: 100%; height: 700px; border: 1px solid var(--border); border-radius: 4px;"
+    ></iframe>
+  </div>
+
+
+ 
+
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>

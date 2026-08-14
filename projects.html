@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — [Your Name]</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .filter-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .filter-row span {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+    color: var(--muted);
+  }
+  .filter-row span.active { color: var(--accent); border-color: var(--accent-dim); }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project-card {
+    border: 1px solid var(--border);
+    background: var(--bg-panel);
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .project-card .status {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid var(--accent-dim);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .project-card h2 {
+    font-family: var(--mono);
+    font-size: 17px;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+
+  .project-card p {
+    color: var(--muted);
+    font-size: 13.5px;
+    margin: 0 0 16px;
+    flex-grow: 1;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .tag-row span {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 3px 8px;
+  }
+
+  .project-card .links {
+    display: flex;
+    gap: 16px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+
+  @media (max-width: 720px) {
+    .project-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span>Rory Spiteri</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<main class="shell">
+
+  <div class="page-head">
+  
+    <h1>Projects</h1>
+    <p>These are projects I have finished or am currently working on both for study and my hobbies. </p>
+  </div>
+
+
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <div class="top-row">
+        <h2>Self-hosted Storage Server</h2>
+        <span class="status">[Completed]</span>
+      </div>
+      <p>I built my own personal homelab using a refurbished office computer NUC7i3DNH. By utilizing Ubuntu LTS will actively allow me to gain practical experience and improve my quality basic tasks with my own self hosted infrastructure not reliant on 3rd party software.</p>
+      <div class="tag-row">
+        <span>[Homelab]</span><span>[Ubuntu]</span><span>[Network Configuration]</span>
+      </div>
+      <div class="links">
+        <a href="project-1.html">[View write-up]</a>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="top-row">
+        <h2>Network Analysis & Detection</h2>
+        <span class="status">[Current]</span>
+      </div>
+      <p> Build and evaluate a network traffic monitoring and intrusion detection laboratory, using synthetic or publicly available attack traffic datasets to validate detection rules and logic. 
+</p>
+      <div class="tag-row">
+        <span>[Red Team]</span><span>[Network Security]</span><span>[IDS/IPS]</span>
+      </div>
+      <div class="links">
+        <a href="project-2.html">[View write-up]</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="top-row">
+        <h2>Active Directory</h2>
+        <span class="status">[Completed]</span>
+      </div>
+      <p>Building and managing a windows domain environment is critical to understanding IT operations and functionality of centralized authentication, policies and user privileges.</p>
+      <div class="tag-row">
+        <span>[Windows]</span><span>[Microsoft Azure]</span><span>[IT POLICIES]</span>
+      </div>
+      <div class="links">
+        <a href="project-3.html">[View write-up]</a>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="top-row">
+        <h2>Social Engineering Phishing Campaign</h2>
+        <span class="status">[Completed]</span>
+      </div>
+      <p> creating a fake portal webpage to steal a dummy target's username and password delivered via an email phishing campaign.
+</p>
+      <div class="tag-row">
+        <span>[Social Engineering]</span><span>[Phishing]</span><span>[Ethical Hacking]</span>
+      </div>
+      <div class="links">
+        <a href="project-4.html">[View write-up]</a>
+  
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+
+</body>
+</html>

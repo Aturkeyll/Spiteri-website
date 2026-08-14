@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me — Rory </title>
+<link rel="stylesheet" href="styles.css">
+<style>
+ 
+
+  .channel-list {
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .channel-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 13.5px;
+  }
+  .channel-list li:last-child { border-bottom: none; }
+  .channel-list li span.label { color: var(--muted); }
+  .channel-list li a { color: var(--text); }
+  .channel-list li a:hover { color: var(--accent); }
+
+  form { display: flex; flex-direction: column; gap: 16px; }
+
+  .field label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 11px 12px;
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 14px;
+  }
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--accent-dim);
+  }
+  .field textarea { min-height: 130px; resize: vertical; }
+
+
+  .note {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  @media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span>Rory Spiteri</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</div>
+
+<main class="shell">
+
+  <div class="page-head">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out and and contact me if you have any questions or opportunities!</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="panel">
+      <p class="section-label">Ways to contact me</p>
+      <ul class="channel-list">
+        <li><span class="label">Email</span>rospit1@icloud.com</li>
+        <li><span class="label">LinkedIn</span> <a href="https://www.linkedin.com/in/rory-spiteri-160731312/">Rory Spiteri </a></li>
+        <li><span class="label">Location</span> <span>Penrith, Australia / Remote</span></li>
+      </ul>
+    </div>
+
+   
+  </div>
+
+</main>
+
+
+
+</body>
+</html>

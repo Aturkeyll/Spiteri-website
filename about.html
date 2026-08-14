@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me — Rory</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+
+  }
+  .about-grid .panel p { color: var(--text); margin: 0 0 14px; }
+  .about-grid .panel p:last-child { margin-bottom: 0; }
+
+  .stack-list {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .stack-list li {
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 8px 10px;
+    color: var(--text);
+  }
+  .stack-list li::before { content: "▸ "; color: var(--accent); }
+
+  .timeline {
+    margin-top: 24px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    width: 100%;
+  }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-item .date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .timeline-item h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .timeline-item p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+.page-head {
+  text-align: center;
+}
+
+.page-head p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  @media (max-width: 720px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .timeline-item { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span>Rory Spiteri</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<main class="shell">
+
+  <div class="page-head">
+    <h1>About Me</h1>
+    <p>I am an aspiring IT network engineer currently close to
+      graduating Western Sydney University by mid 2027.
+      Growing up my whole life I’ve always had a keen interest in
+      computers, technology and programming. This simple interest has
+      grown into a fascination with cybersecurity and specifically IT and
+      Network Engineering.
+    </p>
+  </div>
+
+
+
+    <div class="about-grid">
+      <div class="panel">
+        <p class="section-label">Bio</p>
+        <p>Other than IT my hobbies include amateur hiking, body building,
+          clothes shopping and djing in my own free time. As of current i am
+          working at Fantastic Furniture in sales and warehousing, during my
+          time working i am constantly with all age demographics.</p>
+        <p>Although
+          primarily in sales I find myself often troubleshooting any IT related
+          issues with point of sale machines and networking problems that affect
+          day to day business.</p>
+
+        <p>Through real-world experience in computer networking, vulnerability assessment, active directory and ethical hacking through completion of various labs and online challenges have signifcantly elevated my technical expertise.</p>
+      </div>
+
+      <div class="panel">
+        <p class="section-label">Core Skills & Knowledge</p>
+        <ul class="stack-list">
+          <li>Wireshark</li>
+          <li>Kali Linux</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>NIST</li>
+          <li>ISO 27001</li>
+          <li>Metasploit</li>
+          <li>Wazuh</li>
+          <li>Network Configuration</li>
+          <li>Social Engineering</li>
+          <li>NMAP</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SQL</li>
+          <li>BurpSuite</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel timeline">
+      <p class="section-label">Experience / Timeline</p>
+
+      <div class="timeline-item">
+        <span class="date">Present</span>
+        <div>
+          <h3>Project Manager/Team Lead</h3>
+          <p>WSU — Coordinated a team of 4 across literature and technical research, network analysis and report writing, delegating tasks based on members' abilities and strengths.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="date">2025 - Present</span>
+        <div>
+          <h3>Sales & Warehousing Associate</h3>
+          <p>Fantastic Furniture — Assisted customers with product selection and provided excellent service, while also managing inventory and supporting daily operations.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+</body>
+</html>

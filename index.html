@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rory Spiteri Cybersecurity / IT Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  /* ---------- landing-specific ---------- */
+
+  .landing {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10vh 24px 80px;
+    text-align: center;
+  }
+
+  .hero .eyebrow {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .hero .eyebrow::before { content: "● "; }
+
+  .hero h1 {
+    font-family: var(--mono);
+    font-size: clamp(32px, 6vw, 54px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 18px;
+    color: var(--text);
+  }
+  .hero h1 .highlight { color: var(--accent); }
+
+  .hero .subtitle {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 56ch;
+    margin: 0 auto 8px;
+  }
+
+  .hero .status-row {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 26px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .hero .status-row span b { color: var(--accent); font-weight: 500; }
+
+  /* module / nav cards */
+  .modules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 64px;
+    text-align: left;
+  }
+
+  .module-card {
+    position: relative;
+    display: block;
+    border: 1px solid var(--border);
+    background: var(--bg-panel);
+    border-radius: 4px;
+    padding: 28px 24px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  }
+
+  .module-card:hover,
+  .module-card:focus-visible {
+    border-color: var(--accent-dim);
+    background: var(--bg-panel-hover);
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+
+  /* scanline sweep on hover */
+  .module-card::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: -100%;
+    height: 40%;
+    background: linear-gradient(180deg, transparent, rgba(53,232,160,0.08), transparent);
+    transition: top 0.6s ease;
+    pointer-events: none;
+  }
+  .module-card:hover::after { top: 140%; }
+
+  .module-card .idx {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+
+  .module-card .icon {
+    width: 34px;
+    height: 34px;
+    margin: 16px 0 18px;
+    color: var(--accent);
+  }
+  .module-card .icon svg { width: 100%; height: 100%; }
+
+  .module-card h2 {
+    font-family: var(--mono);
+    font-size: 17px;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+
+  .module-card p {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+
+  .module-card .enter {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .module-card .enter::after { content: "→"; transition: transform 0.2s ease; }
+  .module-card:hover .enter::after { transform: translateX(3px); }
+
+  @media (max-width: 760px) {
+    .modules { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="landing">
+
+  <div class="hero">
+    <p class="eyebrow">Welcome</p>
+    <h1>Rory Spiteri <span class="highlight">/</span><br>Cybersecurity &amp; IT Portfolio</h1>
+    <p class="subtitle">Aspiring Network Engineer and IT specialist</p>
+
+
+    <nav class="modules" aria-label="Site sections">
+
+      <a class="module-card" href="about.html">
+        <span class="idx">ABOUT ME</span>
+ <span class="icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+    <circle cx="12" cy="12" r="9"/>
+    <circle cx="9" cy="10" r="0.9" fill="currentColor" stroke="none"/>
+    <circle cx="15" cy="10" r="0.9" fill="currentColor" stroke="none"/>
+    <path d="M8 14.5c1 1.5 2.5 2.3 4 2.3s3-0.8 4-2.3"/>
+  </svg>
+</span>
+        <h2>About Me</h2>
+        <p>Background, skill set, and how you approach security &amp; systems work.</p>
+        <span class="enter">ACCESS PROFILE</span>
+      </a>
+
+      <a class="module-card" href="projects.html">
+        <span class="idx">PROJECTS</span>
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M7 9l3 3-3 3"/>
+            <path d="M13 15h4"/>
+          </svg>
+        </span>
+        <h2>Projects</h2>
+      </a>
+
+      <a class="module-card" href="contact.html">
+        <span class="idx">CONTACT ME</span>
+        <span class="icon" aria-hidden="true">
+          <!-- secure mail / contact icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="4" width="18" height="14" rx="2"/>
+            <path d="M3 7l9 6 9-6"/>
+            <path d="M17.5 15.5a1.5 1.5 0 100"/>
+          </svg>
+        </span>
+        <h2>Contact Me</h2>
+      </a>
+
+    </nav>
+  </div>
+</div>
+
+
+</body>
+</html>

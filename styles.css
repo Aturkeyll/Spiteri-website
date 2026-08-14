@@ -1,0 +1,196 @@
+/* =========================================================
+   CYBERSECURITY / IT PORTFOLIO TEMPLATE — SHARED STYLES
+   Token system:
+   Color   — bg #0a0e14, panel #10161c, border #1c2732,
+             text #dbe4ea, muted #6b7a88,
+             accent (signal) #35e8a0, alert #ff5f5f
+   Type    — Display/Nav: 'JetBrains Mono', Body: 'Inter'
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0a0e14;
+  --bg-panel: #10161c;
+  --bg-panel-hover: #141b23;
+  --border: #1c2732;
+  --border-bright: #2a3b48;
+  --text: #dbe4ea;
+  --muted: #6b7a88;
+  --accent: #35e8a0;
+  --accent-dim: #1f8a63;
+  --alert: #ff5f5f;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --body: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 42px 42px;
+  background-attachment: fixed;
+  background-position: -1px -1px;
+  color: var(--text);
+  font-family: var(--body);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* subtle vignette so the grid doesn't fight with content */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, var(--bg) 78%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::selection { background: var(--accent-dim); color: #04140d; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- layout shell ---------- */
+
+.shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ---------- topbar / breadcrumb nav (sub-pages) ---------- */
+
+.topbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 24px 40px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.topbar .brand {
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.topbar .brand span { color: var(--accent); }
+
+.topbar nav { display: flex; gap: 22px; }
+
+.topbar nav a {
+  color: var(--muted);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+}
+.topbar nav a:hover,
+.topbar nav a[aria-current="page"] { color: var(--accent); }
+.topbar nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -3px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ---------- terminal-style page header (used on sub-pages) ---------- */
+
+.page-head {
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  border-radius: 4px;
+  padding: 22px 26px;
+  margin-bottom: 40px;
+}
+
+.page-head .tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.page-head .tag::before { content: "//"; color: var(--muted); }
+
+.page-head h1 {
+  font-family: var(--mono);
+  font-size: clamp(26px, 4vw, 36px);
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.page-head p {
+  color: var(--muted);
+  margin: 0;
+  max-width: 62ch;
+}
+
+/* ---------- generic section / panel ---------- */
+
+.panel {
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  border-radius: 4px;
+  padding: 26px;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+}
+
+/* ---------- footer ---------- */
+
+footer.site-footer {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 40px auto 0;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 640px) {
+  .topbar { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .topbar nav { flex-wrap: wrap; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
